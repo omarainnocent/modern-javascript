@@ -149,22 +149,110 @@
  console.log(descFrance)
 
  //Function Declarations vs. Expressions
-//  function percentageOfWorld1(population) {
-//   return (population / 8000) * 100;
-//   }
-//   const percentageOfWorld2 = function (population) {
-//   return (population / 8000) * 100;
-//   };
-//   const percUganda = percentageOfWorld1(1000);
-//   const percItaly = percentageOfWorld1(1200);
-//   const percFrance = percentageOfWorld1(5800);
-//   console.log(percUganda, percFrance, percItaly);
+ function percentageOfWorld1(population) {
+  return (population / 8000) * 100;
+  }
+  const percentageOfWorld2 = function (population) {
+  return (population / 8000) * 100;
+  };
+  const percUganda = percentageOfWorld1(1000);
+  const percItaly = percentageOfWorld1(1200);
+  const percFrance = percentageOfWorld1(5800);
+  console.log(percUganda, percFrance, percItaly);
 
 
 //ARROW FUNCTION
 const percentageOfWorld3 = population => (population / 8000) * 100
-const percUganda = percentageOfWorld3(30)
-const percItaly = percentageOfWorld3(20)
-const percFrance = percentageOfWorld3(50)
+const percUganda1 = percentageOfWorld3(30)
+const percItaly1 = percentageOfWorld3(20)
+const percFrance1 = percentageOfWorld3(50)
 
-console.log(percFrance, percItaly, percUganda)
+console.log(percFrance1, percItaly1, percUganda1)
+
+
+// function calling other function
+const describePopulation = function (country, population) {
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million
+  people, which is about ${percentage}% of the world.`;
+  console.log(description);
+  };
+  describePopulation('Uganda', 20);
+  describePopulation('Italy', 2200);
+  describePopulation('France', 664);
+
+
+
+  //: Introduction to Arrays
+  // const populations = [20, 2882, 664, 156]
+  // console.log(populations, length === 4)
+  // const percentages = [
+  //   percentageOfWorld1(populations[0]),
+  //   percentageOfWorld1(populations[1]),
+  //   percentageOfWorld1(populations[2]),
+  //   percentageOfWorld1(populations[3]),
+  // ]
+  // console.log(percentages)
+
+
+  //Basic Array Operations (Methods)
+//   const neighbours = ['Rwanda', 'Burundi', 'Tanzania']
+//   neighbours. push('Kigali')
+//   console.log(neighbours)
+
+//   neighbours.pop()
+//   console.log(neighbours)
+
+// if (!neighbours.includes('Tanzania')) {
+//   console.log('probably not a country from Asia :D')
+// }
+
+// neighbours[neighbours.indexOf('kenya')] = 'Republic of Kenya'
+// console.log(neighbours)
+
+
+//Introduction to Objects
+// const myCountry = {
+//   country: 'Tanzania',
+//   capital: 'Dodoma',
+//   population: 6,
+//   language: 'Kiswahilli',
+//   neighbours: ['Uganda', 'Kenya', 'Mozambique']
+// }
+
+// Dot vs. Bracket Notation
+// console.log(`${myCountry.country} has ${myCountry.population} million
+//   ${myCountry.language} - speaking people
+//   ${myCountry.neighbours.length} neighbouring countries and capital called ${capital}
+//   `)
+
+//   myCountry.population += 2
+//   console.log(myCountry.population) 
+//   myCountry.population -= 2
+//   console.log(myCountry.population)
+
+  //Object Methods
+  const myCountry = {
+    country: 'South Africa',
+    capital: 'Cape town',
+    language: 'english',
+    population: 6,
+    neighbours: ['Norway', 'Sweden', 'Russia'],
+    describe: function () {
+    console.log(
+    `${this.country} has ${this.population} million
+    ${this.language}-speaking people,
+    ${this.neighbours.length} neighbouring countries and a
+    capital called ${this.capital}.`
+    );
+    },
+    checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true :
+    false;
+    // Even simpler version (see why this works...)
+    // this.isIsland = !Boolean(this.neighbours.length);
+    }
+    };
+    myCountry.describe();
+    myCountry.checkIsland();
+    console.log(myCountry);

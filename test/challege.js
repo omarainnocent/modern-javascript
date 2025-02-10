@@ -100,10 +100,23 @@ const calcTip = (bill) => {
 
 const bill = [125, 555, 44]
 const tips = bill.map(calcTip)
-console.log(tips);
-
 const total = bill.map((bill, index) => bill + tips[index])
 console.log(tips)
+console.log(bill)
 console.log(total)
 
 // challenge 3
+const mark = {
+    fullname: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+}
+console.log(mark)
+
+
+const John = {
+    fullname: "John Smith",
+    mass: 92,
+    height: 1.95,
+}
+console.log(John)

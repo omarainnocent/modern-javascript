@@ -248,22 +248,22 @@
 //     checkIsland: function () {
 //     this.isIsland = this.neighbours.length === 0 ? true :
 //     false;
-//     // Even simpler version (see why this works...)
-//     // this.isIsland = !Boolean(this.neighbours.length);
+    // Even simpler version (see why this works...)
+    // this.isIsland = !Boolean(this.neighbours.length);
 //     }
 //     };
 //     // myCountry.describe();
 //     myCountry.checkIsland();
-//     // console.log(myCountry);
+    // console.log(myCountry);
 
 
-// //Iteration: FOR LOOP
-// // for (let voter = 1; voter <= 100; voter++)
-// //   console.log(`Voter number ${voter} is currently voting`);
+//Iteration: FOR LOOP
+// for (let voter = 1; voter <= 100; voter++)
+//   console.log(`Voter number ${voter} is currently voting`);
 
 
-// // // : Looping Arrays, Breaking and Continuing
-// // const populations = [20, 2882, 662, 156];
+// // : Looping Arrays, Breaking and Continuing
+// const populations = [20, 2882, 662, 156];
 //  const percentages2 = [];
 //  for (let i = 0; i < populations.length; i++) {
 //  const perc = percentageOfWorld1(populations[i]);
@@ -307,11 +307,11 @@
 //   i++
 // }
 // console.log(percentage3)
-// // while (1 < population?.length) {
-// //   // console.log(population)
-// //   const perc = percentageOfWorld1(populations[i]);
-// //   percentage3.push(perc);
-// //   i++;
-// // }
+// while (1 < population?.length) {
+  // console.log(population)
+//   const perc = percentageOfWorld1(populations[i]);
+//   percentage3.push(perc);
+//   i++;
+// }
 
-// // console.log(percentage3)
+// console.log(percentage3)

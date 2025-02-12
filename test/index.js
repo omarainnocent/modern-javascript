@@ -252,12 +252,12 @@
     // this.isIsland = !Boolean(this.neighbours.length);
 //     }
 //     };
-//     // myCountry.describe();
+    // myCountry.describe();
 //     myCountry.checkIsland();
     // console.log(myCountry);
 
 
-//Iteration: FOR LOOP
+// //Iteration: FOR LOOP
 // for (let voter = 1; voter <= 100; voter++)
 //   console.log(`Voter number ${voter} is currently voting`);
 

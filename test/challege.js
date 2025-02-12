@@ -1,26 +1,26 @@
-let markMass2 = 95;
-let markHeight2 = 1.88;
-let johnMass2 = 85;
-let johnHeight2 = 1.76;
+// let markMass2 = 95;
+// let markHeight2 = 1.88;
+// let johnMass2 = 85;
+// let johnHeight2 = 1.76;
 
 
-let markBMI2 = markMass2 / markHeight2 ** 2;
-let johnBMI2 = johnMass2 / johnHeight2 ** 2;
+// let markBMI2 = markMass2 / markHeight2 ** 2;
+// let johnBMI2 = johnMass2 / johnHeight2 ** 2;
 
-let markHigherBMI2 = markBMI2 > johnBMI2;
+// let markHigherBMI2 = markBMI2 > johnBMI2;
 
-console.log(johnBMI2);
-console.log(markHigherBMI2);
-console.log( johnBMI2);
+// console.log(johnBMI2);
+// console.log(markHigherBMI2);
+// console.log( johnBMI2);
 
-// challenge 2
-if (markBMI2 > johnBMI2) {
-    console.log(`Mark's BMI is higher than John's !`);
-} else if (johnBMI2 > markBMI2) {
-    console.log(`John's BMI is higher than Mark's !`);
-} else {
-    console.log(`Mark and John's BMI are the same`);
-}
+// // challenge 2
+// if (markBMI2 > johnBMI2) {
+//     console.log(`Mark's BMI is higher than John's !`);
+// } else if (johnBMI2 > markBMI2) {
+//     console.log(`John's BMI is higher than Mark's !`);
+// } else {
+//     console.log(`Mark and John's BMI are the same`);
+// }
 
 // challenge 3
 //  const averageDolphins = (97 + 112 + 101) / 3;
@@ -143,14 +143,25 @@ const tips = [];
 const totals = [];
 
 
+
 function calcTip(bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    return tip;
 }
+
 for (let i = 0; i < bills.length; i++) {
     const tip = calcTip(bills[i]);
     tips.push(tip);
-    totals.push(bills[i] + tip);
+    const total = bills[i] + tip
+    totals.push(total);
+
 }
+
+console.log("bills:", bills)
+console.log("tips:", tips)
+console.log("totals:", totals)
+
+
 function calcAverage(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -158,21 +169,27 @@ function calcAverage(arr) {
     }
     return sum / arr.length;
 }
+
 const averageTotal = calcAverage(totals);
 console.log('Average total:', averageTotal);
 
+console.log("totals:", totals)
 
 
-// Developer Skills & Editor Setup
-// challenge1
 
-function printForecast(arr) {
-    let forecastStr = '';
-    for (let i = 0; i < arr.length; i++) {
-        forecastStr += `... ${arr[i]}ºC in ${i + 1} days `;
+
+const printForecast = (arr) => {
+    let forecastString = '';
+    for (let i = 0; i < arr.length; i ++) {
+        forecastString += `${arr[i]} oC in ${i + 1} day${i +1 > 1 ?'s' : ''} ...`;
     }
-    console.log(forecastStr + "...");
+    console.log(forecastString)
 }
-printForecast([17, 21, 23]); 
-printForecast([12, 5, -5, 0, 4]); 
+  
+printForecast([17, 21, 23])
+
+
+
+
+
 
